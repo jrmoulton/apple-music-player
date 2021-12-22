@@ -1,0 +1,37 @@
+
+import { MediaControls } from "media_controls.60";
+import { NowPlaying } from "now_playing.60";
+import { VolumeSlider } from "volume_slider.60";
+import { AirPlayMenu } from "airplay_menu.60";
+
+TopBar := Rectangle {
+	height: 50px;
+	border-color: #333333;
+	border-width: 0.5px;
+	// background: #C44748;
+	Sections := HorizontalLayout { 
+		property <percent> spacescale;
+		property <length> finalspace;
+		spacescale: 0.31%; // originally 0.32 to best match
+		finalspace: parent.width * spacescale / 1px * parent.width * spacescale / 1px * parent.width * spacescale;
+
+		width: parent.width - 200px;
+		height: parent.height;
+		spacing: finalspace;
+		padding-left: finalspace - 8px;
+		padding-right: 25px;
+		alignment: end;
+
+		MediaControls { element-colors: #7C7C7C;}	
+		NowPlaying { 
+			width: parent.width * 40%; 
+			height: parent.height * 85%; 
+			y: parent.height / 2 - height / 2; 
+		}
+		VolumeSlider { 
+			element-colors: #7C7C7C;
+		}
+		AirPlayMenu { element-colors: #7C7C7C; }		
+		
+	}
+}

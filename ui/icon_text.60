@@ -1,0 +1,24 @@
+
+import { Icon } from "icon.60";
+
+IconText := Rectangle {
+	property <image> icon;	 
+	property <string> input;
+	property <percent> scale;
+	scale: 100%;
+
+	height: 15px;
+	
+	Icon { 
+        icon-source: icon;
+        y: parent.height / 2 - height / 2;
+		colorize: #C44748;
+	}
+
+	Text { 
+		x: 20px * parent.scale + 10px;
+        y: parent.height / 2 - height / 2;
+		text: input;
+		font-size: 20px * parent.scale - 7px;
+	}
+}

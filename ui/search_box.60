@@ -1,0 +1,21 @@
+
+import { Icon } from "icon.60";
+
+// When the search box gets an `edited` callback the first time the code needs to clear the box
+// https://github.com/sixtyfpssixtyfps/blob/master/docs/builtin_elements.md
+SearchBox := Rectangle { 
+	height: 20px;
+	border-radius: 2px;
+		Icon { 
+			x: 5px;
+			y: parent.height / 2 - height / 2;
+			scale: 65%;
+			source: @image-url("icons/100/search.svg"); 
+			colorize: #E1E1E2;
+		}
+		TextInput { 
+			x: 25px;
+			text: "Search";  
+			vertical-alignment: center;
+		}
+}

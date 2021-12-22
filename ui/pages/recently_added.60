@@ -1,0 +1,18 @@
+
+RecentlyAdded := Rectangle {
+	DateAdded := Rectangle {
+		height: 50px;
+		background: #1A1A1A;
+		Text {
+			x: 40px;
+
+			text: "This Month";
+			y: parent.height / 2 - height / 2;
+			// font-weight: 999;
+			font-size: 19px;
+			font-family: "SF Pro";
+			font-weight: 600;
+		}
+	}
+}
+

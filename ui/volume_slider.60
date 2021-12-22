@@ -1,0 +1,39 @@
+
+import { Icon } from "icon.60";
+
+VolumeSlider := Rectangle {
+	property <brush> element-colors;
+	width: 120px;	
+	
+	HorizontalLayout {
+		spacing: 5px;
+		alignment: center;
+
+		Icon { 
+			icon-source: @image-url("icons/100/low-volume2.png"); 
+			colorize: element-colors;
+			y: parent.height / 2 - height / 2;
+			scale: 100%;
+		}
+		Icon { 
+			icon-source: @image-url("icons/100/horizontal-line.png"); 
+			colorize: element-colors;
+			y: parent.height / 2 - height / 2;
+			scale: 100%;
+			width: 50px;
+			height: 45px;
+		}
+		Icon { 
+			icon-source: @image-url("icons/100/audio.png"); 
+			colorize: element-colors;
+			y: parent.height / 2 - height / 2;
+			scale: 90%;
+		}
+	}
+	Icon { 
+		icon-source: @image-url("icons/100/circle.svg");
+		y: parent.height / 2 - height / 2;
+		x: 50px;
+		scale: 85%;
+	}
+}

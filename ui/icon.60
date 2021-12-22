@@ -1,0 +1,10 @@
+
+Icon := Image { 
+	property <percent> scale;
+	property <image> icon-source;
+
+	scale: 100%;
+	source: icon-source;
+	width: 20px * (scale);
+	height: 20px * (scale);
+}

@@ -1,0 +1,35 @@
+
+NowPlaying := Rectangle {
+	background: #413E48;
+	border-radius: 3px;
+
+	HorizontalLayout {
+		alignment: start;
+		height: parent.height;
+		y: parent.height / 2 - height / 2;
+
+		CoverBox := Rectangle { // This needs to be here because images are not placed correctly currently inside of a layout
+			border-radius: 5px;
+			width: parent.height;
+			Image { 
+				source: @image-url("images/cover_art.jpg"); 
+				height: parent.height;
+			}	
+		}
+		Rectangle {
+			width: parent.width - parent.height;
+
+			NowPlayingTitle := Text { 
+				text: "Move on";
+				y: parent.height / 3 - height / 2;
+				x: parent.width / 2 - width / 2;
+			}
+			Artist := Text { 
+				text: "Imagine Dragons";
+				y: parent.height / 1.5 - height / 2;
+				x: parent.width / 2 - width / 2;
+				color: #AAA8AD;
+			}
+		}
+	}
+}

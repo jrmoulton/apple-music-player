@@ -1,0 +1,46 @@
+
+import { Icon } from "icon.60";
+
+MediaControls := Rectangle {
+	width: 150px;
+	property <brush> element-colors;
+	HorizontalLayout { // This is here so that it will fill
+		alignment: center;
+		spacing: 10px;
+		Icon { 
+			colorize: element-colors;
+			icon-source: @image-url("icons/100/shuffle.png"); 
+			scale: 93%;
+			y: parent.height / 2 - height / 2;
+			// x: parent.width / 5 - width / 2;
+		}
+		Icon { 
+			colorize: element-colors;
+			icon-source: @image-url("icons/100/rewind.png"); 
+			scale: 120%;
+			y: parent.height / 2 - height / 2;
+			// x: parent.width / 3 - width / 2;
+		}
+		Icon { 
+			colorize: element-colors;
+			icon-source: @image-url("icons/100/play.png"); 
+			scale: 120%;
+			y: parent.height / 2 - height / 2;
+			// x: parent.width / 2 - width / 2;
+		}
+		Icon { 
+			colorize: element-colors;
+			icon-source: @image-url("icons/100/fast-forward.png"); 
+			scale: 120%;
+			y: parent.height / 2 - height / 2;
+			// x: parent.width / 1.5 - width / 2;
+		}
+		Icon { 
+			colorize: element-colors;
+			icon-source: @image-url("icons/100/repeat.png"); 
+			scale: 93%;
+			y: parent.height / 2 - height / 2;
+			// x: parent.width / 1.25 - width / 2;
+		}
+	}
+}
