@@ -1,20 +1,22 @@
 
-import {SideBar} from "side_bar.60";
-import {TopBar} from "top_bar.60";
+import { SideBar } from "side_bar.60";
+import { TopBar } from "top_bar.60";
 import { RecentlyAdded } from "pages/recently_added.60";
 
 MainWindow := Window {
 	title: "";
 	background: transparent;
 	min-width: 980px;
-	preferred-width: 1200px;
+	preferred-width: 980px;
+	min-height: 375px;
+	preferred-height: 500px;
 
 	TopBar {
 		x: 200px;
 	}
 	SideBar {
 		x: 15px;
-		y: 30px;
+		y: 50px;
 	}
 	RecentlyAdded { 
 		x: 200px;

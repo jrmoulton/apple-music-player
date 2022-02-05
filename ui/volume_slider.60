@@ -10,30 +10,36 @@ VolumeSlider := Rectangle {
 		alignment: center;
 
 		Icon { 
-			icon-source: @image-url("icons/100/low-volume2.png"); 
-			colorize: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/low-volume2.png"); 
+			element-color: element-colors;
 			y: parent.height / 2 - height / 2;
 			scale: 100%;
+			highlight-background: true;
+			highlight-element-color: #7E7E7E;
+			highlight-element: true;
 		}
 		Icon { 
-			icon-source: @image-url("icons/100/horizontal-line.png"); 
-			colorize: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/horizontal-line.png"); 
+			element-color: element-colors;
 			y: parent.height / 2 - height / 2;
 			scale: 100%;
 			width: 50px;
 			height: 45px;
 		}
 		Icon { 
-			icon-source: @image-url("icons/100/audio.png"); 
-			colorize: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/audio.png"); 
+			element-color: element-colors;
 			y: parent.height / 2 - height / 2;
 			scale: 90%;
+			highlight-background: true;
+			highlight-element-color: #7E7E7E;
+			highlight-element: true;
 		}
 	}
 	Icon { 
-		icon-source: @image-url("icons/100/circle.svg");
+		icon-source: @image-url("deps/jmui/iconses/100/circle.svg");
 		y: parent.height / 2 - height / 2;
 		x: 50px;
-		scale: 85%;
+		scale: 75%;
 	}
 }

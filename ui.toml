@@ -1,0 +1,2 @@
+[dependencies]
+jmui = { git = "https://github.com/jrmoulton/jmui"}

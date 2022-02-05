@@ -8,7 +8,6 @@ TopBar := Rectangle {
 	height: 50px;
 	border-color: #333333;
 	border-width: 0.5px;
-	// background: #C44748;
 	Sections := HorizontalLayout { 
 		property <percent> spacescale;
 		property <length> finalspace;
@@ -29,7 +28,7 @@ TopBar := Rectangle {
 			y: parent.height / 2 - height / 2; 
 		}
 		VolumeSlider { 
-			element-colors: #7C7C7C;
+			element-colors: #414141;
 		}
 		AirPlayMenu { element-colors: #7C7C7C; }		
 		

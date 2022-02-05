@@ -1,10 +1,33 @@
 
-Icon := Image { 
+Icon := TouchArea { 
 	property <percent> scale;
 	property <image> icon-source;
+	property <brush> background-color;
+	property <brush> element-color;
+	property <bool> highlight-background;
+	property <bool> highlight-element;
+	property <brush> highlight-element-color;
 
 	scale: 100%;
-	source: icon-source;
 	width: 20px * (scale);
 	height: 20px * (scale);
+	background-color: #2C2C2C;
+	highlight-background: false;
+
+	Rectangle {
+		border-radius: 5px * parent.scale;
+		width: root.width * 135%; // These lines might not be necessary
+		height: root.height * 135%;
+		background: (root.has-hover && highlight-background) ? root.background-color : transparent;
+		x: root.width / 2 - width / 2;
+		y: root.height / 2 - height / 2;
+		Image {
+			source: root.icon-source;
+			colorize: (root.has-hover && root.highlight-element) ? root.highlight-element-color : root.element-color;
+			width: root.width;
+			height: root.height;
+			x: parent.width / 2 - width / 2;
+			y: parent.height / 2 - height / 2;
+		}
+	}
 }

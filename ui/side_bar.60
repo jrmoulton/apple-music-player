@@ -1,34 +1,21 @@
 
 import { ScrollView } from "sixtyfps_widgets.60";	
-import { IconText } from "icon_text.60";
 import { SearchBox } from "search_box.60";
+import { ListenSection } from "listen_section.60";
 
-SideBar := VerticalLayout {
+SideBar := Rectangle {
 	width: 185px;
-	spacing: 20px;
+	preferred-height: 200px;
 
-	SearchBox {
-		width: parent.width - 20px;
-	}
 	ScrollView {
-		AppleMusic := Rectangle {
-			Text { 
-				text: "Apple Music"; 
-				font-size: 12px;
-				color: #6B6773;
+		VerticalLayout {
+		spacing: 10px;
+
+			SearchBox {
+				// This needs to be enabled to get the search box to the correct scale
+				// width: parent.width - 20px;
 			}
-			Rectangle {
-				y: 20px;
-				VerticalLayout {
-					x: 10px;
-					spacing: 5px;
-					// Each ov these text elemets coult by an element with an image and it needs to be clickable
-					
-					IconText { icon: @image-url("icons/100/play.png"); input: "Listen Now";  }
-					IconText { icon: @image-url(""); input: "Browse"; }
-					IconText { icon: @image-url(""); input: "Radio"; }
-					}
-				}
+			ListenSection {  }
 		}
 	}
 }

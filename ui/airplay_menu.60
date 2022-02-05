@@ -10,19 +10,22 @@ AirPlayMenu := Rectangle {
 		spacing: 10px;
 
 		Icon { 
-			icon-source: @image-url("icons/100/airplay-audio.svg");
-			colorize: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/airplay-audio.svg");
+			element-color: element-colors;
 			y: parent.height / 2 - height / 2;
+			highlight-background: true;
 		}
 		Icon { 
-			icon-source: @image-url("icons/100/music-lyrics.png");
-			colorize: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/music-lyrics.png");
+			element-color: element-colors;
 			y: parent.height / 2 - height / 2;
+			highlight-background: true;
 		}
 		Icon { 
-			icon-source: @image-url("icons/100/bulleted-list.png");
-			colorize: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/bulleted-list.png");
+			element-color: element-colors;
 			y: parent.height / 2 - height / 2;
+			highlight-background: true;
 		}
 	}
 }

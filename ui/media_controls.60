@@ -4,43 +4,49 @@ import { Icon } from "icon.60";
 MediaControls := Rectangle {
 	width: 150px;
 	property <brush> element-colors;
+
 	HorizontalLayout { // This is here so that it will fill
 		alignment: center;
 		spacing: 10px;
+
 		Icon { 
-			colorize: element-colors;
-			icon-source: @image-url("icons/100/shuffle.png"); 
-			scale: 93%;
+			element-color: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/shuffle.png"); 
+			scale: 85%;
 			y: parent.height / 2 - height / 2;
-			// x: parent.width / 5 - width / 2;
+			highlight-background: true;
+			highlight-element-color: #EAE9EA;
+			highlight-element: true;
 		}
 		Icon { 
-			colorize: element-colors;
-			icon-source: @image-url("icons/100/rewind.png"); 
+			element-color: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/rewind.png"); 
 			scale: 120%;
 			y: parent.height / 2 - height / 2;
-			// x: parent.width / 3 - width / 2;
+			highlight-background: true;
 		}
 		Icon { 
-			colorize: element-colors;
-			icon-source: @image-url("icons/100/play.png"); 
+			element-color: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/play.png"); 
 			scale: 120%;
 			y: parent.height / 2 - height / 2;
-			// x: parent.width / 2 - width / 2;
+			highlight-background: true;
 		}
 		Icon { 
-			colorize: element-colors;
-			icon-source: @image-url("icons/100/fast-forward.png"); 
+			element-color: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/fast-forward.png"); 
 			scale: 120%;
 			y: parent.height / 2 - height / 2;
-			// x: parent.width / 1.5 - width / 2;
+			highlight-background: true;
 		}
 		Icon { 
-			colorize: element-colors;
-			icon-source: @image-url("icons/100/repeat.png"); 
-			scale: 93%;
+			element-color: element-colors;
+			icon-source: @image-url("deps/jmui/iconses/100/repeat.png"); 
+			scale: 75%;
 			y: parent.height / 2 - height / 2;
-			// x: parent.width / 1.25 - width / 2;
+			highlight-background: true;
+			highlight-element-color: #EAE9EA;
+			highlight-element: true;
 		}
 	}
 }
